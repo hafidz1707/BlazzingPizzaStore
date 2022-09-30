@@ -1,4 +1,5 @@
 using BlazingPizza.Data;
+using BlazingPizza.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,7 @@ builder.Services.AddServerSideBlazor();
 // Register the pizzas service
 builder.Services.AddSingleton<PizzaService>();
 builder.Services.AddHttpClient();
+builder.Services.AddScoped<OrderState>();
 builder.Services.AddSqlite<PizzaStoreContext>("Data Source=pizza.db");
 
 var app = builder.Build();

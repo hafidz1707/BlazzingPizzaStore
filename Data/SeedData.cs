@@ -9,7 +9,7 @@ namespace BlazingPizza.Data
     {
         public static void Initialize(PizzaStoreContext db)
         {
-            var specials = new PizzaSpecial[]
+            var specials = new List<PizzaSpecial>
             {
                 new PizzaSpecial()
                 {
